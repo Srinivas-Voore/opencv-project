@@ -25,23 +25,23 @@ def email_firealert():
 
     s.starttls()
     
-    s.login("v.srinivassunny7@gmail.com", "Srinivas@7")
+    s.login("@gmail.com", "pwd")
 
     message = "Fire Alert!!!"
 
-    s.sendmail("v.srinivassunny7@gmail.com", "rpacreds@gmail.com", message)
+    s.sendmail("@gmail.com", "@gmail.com", message)
 
     s.quit()
 
 
 def sms_firealert():
-    account_sid = "ACf133ff1109bcf1ed6f2609eaf7ddd6e4"
-    auth_token = 'a6bfddb155b1ee72749beda385d7c7f4'
+    account_sid = "ACf133ff1109bcf"
+    auth_token = 'a6bfddb155b1ee72'
 
     client = Client(account_sid, auth_token)
 
     message = client.messages.create(
-        body="Fire Alert!!!", from_="+17739178172", to="+918247839569")
+        body="Fire Alert!!!", from_="+1", to="+91")
 
     print(message.sid)
 
